@@ -1,0 +1,31 @@
+{
+  "name": "css-grid.de",
+  "version": "1.0.0",
+  "description": "css grid landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benschodie/css-grid.de.git"
+  },
+  "keywords": [
+    "cssgrid",
+    "css-grid",
+    "grid",
+    "css",
+    "flexbox",
+    "styling",
+    "layout"
+  ],
+  "author": "Benjamin Konopka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benschodie/css-grid.de/issues"
+  },
+  "homepage": "https://github.com/Benschodie/css-grid.de#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

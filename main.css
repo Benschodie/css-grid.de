@@ -1,4 +1,11 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {
@@ -8,7 +15,6 @@ body {
     rgba(255, 155, 0, 0.7) 6%,
     rgba(231, 86, 210, 0.7) 100%
   );
-
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -20,7 +26,38 @@ h4 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
+  letter-spacing: 1rem;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: start;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+li {
+  font-size: 3rem;
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: rgb(20, 1, 1);
+}
+
+li a:hover {
+  text-decoration: none;
+  color: rgb(71, 71, 71);
 }
 
 .container {
@@ -30,4 +67,5 @@ h1 {
 }
 
 .container .item {
+  font-size: 3rem;
 }

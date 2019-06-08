@@ -1,3 +1,28 @@
+* {
+}
+
+body {
+  background: rgb(255, 155, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 155, 0, 0.7) 6%,
+    rgba(231, 86, 210, 0.7) 100%
+  );
+
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -5,5 +30,4 @@
 }
 
 .container .item {
-  background-color: red;
 }

@@ -8,6 +8,10 @@ html {
   font-size: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background: rgb(255, 155, 0);
   background: linear-gradient(
@@ -51,13 +55,16 @@ li {
 }
 
 li a {
-  text-decoration: none;
   color: rgb(20, 1, 1);
 }
 
 li a:hover {
-  text-decoration: none;
   color: rgb(71, 71, 71);
+}
+
+.logo {
+  padding: 2rem;
+  color: #960ce8;
 }
 
 .container {
@@ -68,4 +75,32 @@ li a:hover {
 
 .container .item {
   font-size: 3rem;
+}
+
+.item:nth-child(1) {
+  background-color: blue;
+}
+.item:nth-child(2) {
+  background-color: green;
+}
+.item:nth-child(3) {
+  background-color: yellow;
+}
+.item:nth-child(4) {
+  background-color: purple;
+}
+.item:nth-child(5) {
+  background-color: black;
+}
+.item:nth-child(6) {
+  background-color: white;
+}
+.item:nth-child(7) {
+  background-color: lightpink;
+}
+.item:nth-child(8) {
+  background-color: brown;
+}
+.item:nth-child(9) {
+  background-color: grey;
 }

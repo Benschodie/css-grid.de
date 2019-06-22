@@ -21,11 +21,12 @@
   },
   "scripts": {
     "start": "start-server-and-test server http://localhost:8080 watch",
-    "build": "npm run handlebars && npm run sass",
+    "build": "npm run merge-posts && npm run handlebars && npm run sass",
     "server": "live-server dist",
-    "handlebars": "hbs src/pages/index.hbs -P 'src/**/*.hbs' -o dist",
+    "handlebars": "hbs src/website/pages/*.hbs -P 'src/**/*.hbs' -o dist",
     "sass": "node-sass src -o dist --output-style compressed",
-    "watch": "npm-watch"
+    "watch": "npm run merge:posts && npm-watch",
+    "merge:posts": "node src/merge-posts/index.js"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,7 @@
   "homepage": "https://github.com/Benschodie/css-grid.de#readme",
   "dependencies": {},
   "devDependencies": {
+    "contentful": "^7.8.0",
     "handlebars": "^4.1.2",
     "hbs-cli": "^1.3.0",
     "live-server": "^1.2.1",

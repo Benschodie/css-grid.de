@@ -1,0 +1,12 @@
+#posts {
+  display: grid;
+  grid-template-columns: 20px minmax(280px, 800px) 20px;
+  .post {
+    margin-bottom: 20px;
+    grid-column-start: 2;
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+  }
+}

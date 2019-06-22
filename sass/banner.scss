@@ -7,6 +7,16 @@
   grid-template-columns: 1fr minmax(800px, 6fr) minmax(300px, 2fr) 1fr;
   grid-gap: 2rem;
 
+  @include breakpoint (1200px) {
+    grid-template-columns: 1fr minmax(400px, 6fr) minmax(150px, 2fr) 1fr;
+  }
+
+  @include breakpoint (800px) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+
   &__hero {
     grid-area: 1 / 2 / 4 / 3;
     @include containerDefaults(20rem, $yellow, $origin-dark);
@@ -14,7 +24,6 @@
 
   &__item {
     &--blog {
-
       // punkt links oben: reihenfolte oben dann links, punkt rechts unten: reihenfolge unten dann rechts
       grid-area: 1 / 3 / 2 / 4;
       @include containerDefaults(5rem, $yellow, $origin-dark);

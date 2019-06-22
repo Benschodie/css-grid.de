@@ -6,9 +6,13 @@ $yellow: #E9C058;
 // Fonts
 $font-amatic: 'Amatic SC', cursive;
 
+// Breakpoints
+$breakpoint-s: 600px;
+$breakpoint-m: 1200px;
+
 // Mixins
-@mixin breakpoint($width) {
-  @media screen and (max-width: #{$width}){
+@mixin fromBreakpoint($width) {
+  @media screen and (min-width: #{$width}){
     @content;
   }
 }

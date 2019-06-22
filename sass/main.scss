@@ -1,4 +1,6 @@
-@import './items.scss';
+
+@import './settings.scss';
+@import './banner.scss';
 
 $font-size-root: 10px;
 
@@ -30,7 +32,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Amatic SC', cursive;
+  font-family: $font-amatic;
 }
 
 h1 {
@@ -59,7 +61,7 @@ li {
 }
 
 li a {
-  color: rgb(20, 1, 1);
+  color: $origin-dark;
 }
 
 li a:hover {
@@ -69,10 +71,4 @@ li a:hover {
 .logo {
   padding: 2rem;
   color: #960ce8;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
 }

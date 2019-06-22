@@ -1,0 +1,24 @@
+// Colors
+$origin-dark: #121212;
+$container-bg: #272727;
+$yellow: #E9C058;
+
+// Fonts
+$font-amatic: 'Amatic SC', cursive;
+
+// Mixins
+@mixin breakpoint($width) {
+  @media screen and (max-width: #{$width}){
+    @content;
+  }
+}
+
+@mixin containerDefaults($fontSize, $color, $backgroundColor) {
+  font-family: $font-amatic;
+  background-color: $container-bg;
+  font-size: $fontSize;
+  text-align: center;
+  a {
+    color: $color;
+  }
+}

@@ -3,6 +3,14 @@
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr minmax(800px, 6fr) minmax(300px, 2fr) 1fr;
   grid-gap: 2rem; }
+  @media screen and (max-width: 1200px) {
+    .banner {
+      grid-template-columns: 1fr minmax(400px, 6fr) minmax(150px, 2fr) 1fr; } }
+  @media screen and (max-width: 800px) {
+    .banner {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+      grid-auto-flow: row; } }
   .banner__hero {
     grid-area: 1 / 2 / 4 / 3;
     font-family: "Amatic SC", cursive;

@@ -1,1 +1,16 @@
 $origin-dark: #121212;
+$yellow: yellow;
+
+// Mixins
+@mixin breakpoint($width) {
+  @media screen and (max-width: #{$width}){
+    @content;
+  }
+}
+
+@mixin containerDefaults($fontSize, $color, $backgroundColor) {
+  background-color: $backgroundColor;
+  font-size: $fontSize;
+  color: $color;
+  text-align: center;
+}

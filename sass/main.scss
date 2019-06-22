@@ -1,6 +1,5 @@
 
 @import './settings.scss';
-@import './items.scss';
 @import './banner.scss';
 
 $font-size-root: 10px;
@@ -72,10 +71,4 @@ li a:hover {
 .logo {
   padding: 2rem;
   color: #960ce8;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
 }

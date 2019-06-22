@@ -1,40 +1,56 @@
 @import '../../styles/settings.scss';
 
 .banner {
-
+  margin-top: 1rem;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr minmax(800px, 6fr) minmax(300px, 2fr) 1fr;
-  grid-gap: 2rem;
+  grid-template-columns: 1fr minmax(400px, 1fr) 1fr;
+  grid-gap: .5rem;
 
-  @include breakpoint (1200px) {
-    grid-template-columns: 1fr minmax(400px, 6fr) minmax(150px, 2fr) 1fr;
-  }
+  @include fromBreakpoint($breakpoint-s) {
+    grid-template-columns: 1fr minmax(400px, 6fr) minmax(100px, 2fr) 1fr;  }
 
-  @include breakpoint (800px) {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
+  @include fromBreakpoint($breakpoint-m) {
+    margin-top: 5rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr minmax(800px, 6fr) minmax(300px, 2fr) 1fr;
+    grid-gap: 2rem;
   }
 
   &__hero {
-    grid-area: 1 / 2 / 4 / 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 15rem !important;
     @include containerDefaults(20rem, $yellow, $origin-dark);
+    @include fromBreakpoint($breakpoint-s) {
+      grid-area: 1 / 2 / 4 / 3;
+    }
   }
 
   &__item {
     &--blog {
       // punkt links oben: reihenfolte oben dann links, punkt rechts unten: reihenfolge unten dann rechts
-      grid-area: 1 / 3 / 2 / 4;
+      grid-column-start: 2;
+      grid-column-end: 3;
       @include containerDefaults(5rem, $yellow, $origin-dark);
+      @include fromBreakpoint($breakpoint-s) {
+        grid-area: 1 / 3 / 2 / 4;
+      }
     }
     &--layout {
-      grid-area: 2 / 3 / 3 / 4;
+      grid-column-start: 2;
+      grid-column-end: 3;
       @include containerDefaults(5rem, $yellow, $origin-dark);
+      @include fromBreakpoint($breakpoint-s) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
     }
     &--app {
-      grid-area: 3 / 3 / 4 / 4;
+      grid-column-start: 2;
+      grid-column-end: 3;
       @include containerDefaults(5rem, $yellow, $origin-dark);
+      @include fromBreakpoint($breakpoint-s) {
+        grid-area: 3 / 3 / 4 / 4;
+      }
     }
   }
 

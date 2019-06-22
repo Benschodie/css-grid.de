@@ -1,5 +1,6 @@
 $origin-dark: #121212;
-$yellow: yellow;
+$container-bg: #272727;
+$yellow: #E9C058;
 
 // Mixins
 @mixin breakpoint($width) {
@@ -9,8 +10,10 @@ $yellow: yellow;
 }
 
 @mixin containerDefaults($fontSize, $color, $backgroundColor) {
-  background-color: $backgroundColor;
+  background-color: $container-bg;
   font-size: $fontSize;
-  color: $color;
   text-align: center;
+  a {
+    color: $color;
+  }
 }

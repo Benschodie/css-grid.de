@@ -17,10 +17,9 @@ $breakpoint-m: 1200px;
   }
 }
 
-@mixin containerDefaults($fontSize, $color, $backgroundColor) {
+@mixin containerDefaults($color, $container-bg) {
   font-family: $font-amatic;
   background-color: $container-bg;
-  font-size: $fontSize;
   text-align: center;
   a {
     color: $color;

@@ -3,7 +3,7 @@
 .banner {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: 1fr minmax(400px, 1fr) 1fr;
+  grid-template-columns: 1rem 1fr 1rem;
   grid-gap: .5rem;
 
   @include fromBreakpoint($breakpoint-s) {
@@ -19,35 +19,39 @@
   &__hero {
     grid-column-start: 2;
     grid-column-end: 3;
-    font-size: 15rem !important;
-    @include containerDefaults(20rem, $yellow, $origin-dark);
+    font-size: 15rem;
+    @include containerDefaults($yellow, $origin-dark);
     @include fromBreakpoint($breakpoint-s) {
       grid-area: 1 / 2 / 4 / 3;
+      font-size: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
   &__item {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    @include containerDefaults($yellow, $origin-dark);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+
     &--blog {
       // punkt links oben: reihenfolte oben dann links, punkt rechts unten: reihenfolge unten dann rechts
-      grid-column-start: 2;
-      grid-column-end: 3;
-      @include containerDefaults(5rem, $yellow, $origin-dark);
       @include fromBreakpoint($breakpoint-s) {
         grid-area: 1 / 3 / 2 / 4;
       }
     }
     &--layout {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      @include containerDefaults(5rem, $yellow, $origin-dark);
       @include fromBreakpoint($breakpoint-s) {
         grid-area: 2 / 3 / 3 / 4;
       }
     }
     &--app {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      @include containerDefaults(5rem, $yellow, $origin-dark);
       @include fromBreakpoint($breakpoint-s) {
         grid-area: 3 / 3 / 4 / 4;
       }

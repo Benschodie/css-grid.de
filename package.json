@@ -17,6 +17,13 @@
       ],
       "extensions": "scss",
       "quiet": false
+    },
+    "copyjs": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js",
+      "quiet": false
     }
   },
   "scripts": {
@@ -24,6 +31,7 @@
     "build": "npm run merge:posts && npm run handlebars && npm run sass",
     "server": "live-server dist",
     "handlebars": "hbs src/website/pages/*.hbs -P 'src/**/*.hbs' -o dist",
+    "copyjs": "cpy website/**/*.js ../dist/ --cwd=src --parents",
     "sass": "node-sass src -o dist --output-style compressed",
     "watch": "npm run merge:posts && npm-watch",
     "merge:posts": "node src/merge-posts/index.js"
@@ -51,6 +59,7 @@
   "devDependencies": {
     "@contentful/rich-text-html-renderer": "^13.1.0",
     "contentful": "^7.8.0",
+    "cpy-cli": "^2.0.0",
     "handlebars": "^4.1.2",
     "hbs-cli": "^1.3.0",
     "live-server": "^1.2.1",

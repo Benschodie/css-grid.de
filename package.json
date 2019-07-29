@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "start-server-and-test server http://localhost:8080 watch",
-    "build": "npm run merge:posts && npm run handlebars && npm run sass",
+    "build": "npm run merge:posts && npm run handlebars && npm run sass && npm run copyjs",
     "server": "live-server dist",
     "handlebars": "hbs src/website/pages/*.hbs -P 'src/**/*.hbs' -o dist",
     "copyjs": "cpy website/**/*.js ../dist/ --cwd=src --parents",

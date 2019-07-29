@@ -1,7 +1,6 @@
 (async () => {
   const json = await fetch(`https://api.instagram.com/v1/users/self/media/recent?access_token=14590747835.1677ed0.05084289959a41e99c42caf952ed224c`).then(res => res.json());
   const { data } = json;
-  console.log(json);
 
   const createHashtagHtml = tag => `<li>#${tag}</li>`;
 

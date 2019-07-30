@@ -40,35 +40,11 @@ h1 {
   letter-spacing: 1rem;
 }
 
-nav {
+// main site grid
+
+main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: start;
-  font-family: 'Amatic SC', cursive;
-  font-weight: bold;
-  letter-spacing: 0.2rem;
-}
-
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-li {
-  font-size: 3rem;
-  list-style: none;
-}
-
-li a {
-  color: $origin-dark;
-}
-
-li a:hover {
-  color: rgb(71, 71, 71);
-}
-
-.logo {
-  padding: 2rem;
-  color: #960ce8;
+  grid-template-areas:
+    "sidebar hero hero"
+    "sidebar content content"
 }

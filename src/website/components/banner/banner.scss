@@ -4,15 +4,16 @@
   margin-top: 1rem;
   display: grid;
   grid-template-columns: 1rem 1fr 1rem;
-  grid-gap: .5rem;
+  grid-gap: 0.5rem;
 
   @include fromBreakpoint($breakpoint-s) {
+    grid-gap: 3rem;
     grid-template-columns: 1fr minmax(400px, 8fr) minmax(100px, 4fr) 1fr;  }
 
   @include fromBreakpoint($breakpoint-m) {
     margin-top: 5rem;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr minmax(800px, 8fr) minmax(300px, 4fr) 1fr;
+    grid-template-columns: 1fr 8fr 4fr 1fr;
     grid-gap: 2rem;
   }
 

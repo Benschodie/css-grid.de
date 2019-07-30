@@ -19,6 +19,13 @@ a {
 }
 
 body {
+  display: grid;
+  grid-template-columns: 20vw 1fr 1fr;
+  grid-template-areas:
+    "sidebar hero hero"
+    "sidebar content content";
+
+  height: 100vh;
   background: rgb(255, 155, 0);
   background: linear-gradient(
     90deg,
@@ -43,8 +50,13 @@ h1 {
 // main site grid
 
 main {
-  display: grid;
-  grid-template-areas:
-    "sidebar hero hero"
-    "sidebar content content"
+  overflow-y: scroll;
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+  grid-row: 1/ -1;
+  height: 100vh;
+  background-color: $origin-dark;
 }

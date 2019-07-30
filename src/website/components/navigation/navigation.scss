@@ -1,0 +1,29 @@
+@import '../../styles/settings.scss';
+
+aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation {
+  color: $yellow;
+  font-size: 2rem;
+
+  .logo {
+    padding: 1rem;
+  }
+
+  li {
+    list-style: none;
+    padding: 1rem;
+  }
+
+  a {
+    color: $yellow;
+
+    &:hover {
+      color: grey;
+    }
+  }
+}

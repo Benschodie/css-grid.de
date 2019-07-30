@@ -4,8 +4,8 @@ $instaSectionBackground: #f3d1a0;
 
 .instagram {
   margin-top: 5rem;
-  background-color: $instaSectionBackground;
   padding: 5rem 0;
+  grid-area: content;
 }
 
 .insta__feeds {

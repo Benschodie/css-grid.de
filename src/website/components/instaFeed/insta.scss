@@ -6,22 +6,21 @@ $instaSectionBackground: #f3d1a0;
   margin-top: 5rem;
   background-color: $instaSectionBackground;
   padding: 5rem 0;
-
 }
 
 .insta__feeds {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1rem 1fr 1rem;
-  grid-gap: 1.5rem;
+  grid-gap: 0.5rem;
 
   @include fromBreakpoint($breakpoint-s) {
-    grid-template-columns: 1fr repeat(2, minmax(300px, 6fr)) 1fr;
+    grid-template-columns: 1fr repeat(2, minmax(250px, 6fr)) 1fr;
     grid-gap: 3rem;
   }
 
   @include fromBreakpoint($breakpoint-m) {
-    grid-template-columns: 1fr repeat(3, minmax(350px, 4fr)) 1fr;
+    grid-template-columns: 1fr repeat(3, 4fr) 1fr;
     grid-gap: 2rem;
   }
 

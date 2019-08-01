@@ -1,0 +1,17 @@
+@import '../../styles/settings.scss';
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(6, 2fr);
+
+  height: 20vh;
+  background-color: #0885968c;
+
+  &__right {
+    grid-column: 1 / span 6;
+  }
+
+  &__left {
+    grid-column: 6 / -1;
+  }
+}

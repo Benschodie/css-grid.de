@@ -1,0 +1,33 @@
+@import '../../styles/settings.scss';
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(6, 2fr);
+
+  height: 20vh;
+  background-color: #343A40;
+
+
+  &__left {
+    grid-column: 1 / span 3;
+    color: $yellow;
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+  }
+
+  &__right {
+    grid-column: 4 / span 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: whitesmoke;
+      padding: 0 2rem;
+    }
+  }
+}

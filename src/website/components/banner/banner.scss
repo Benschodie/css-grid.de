@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 1rem 1fr 1rem;
   grid-gap: 0.5rem;
+  grid-area: hero;
 
   @include fromBreakpoint($breakpoint-s) {
     grid-gap: 3rem;

@@ -16,15 +16,18 @@ html {
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 body {
-  background: rgb(255, 155, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 155, 0, 0.7) 6%,
-    rgba(231, 86, 210, 0.7) 100%
-  );
+  display: grid;
+  grid-template-columns: 20vw 1fr 1fr;
+  grid-template-areas:
+    "sidebar hero hero"
+    "sidebar content content";
+
+  height: 100vh;
+  background-image: linear-gradient(to right top, #051937, #003e62, #00646d, #008850, #75a30f);
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -40,35 +43,26 @@ h1 {
   letter-spacing: 1rem;
 }
 
-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: start;
-  font-family: 'Amatic SC', cursive;
-  font-weight: bold;
-  letter-spacing: 0.2rem;
+// main site grid
+
+main {
+  overflow-y: scroll;
+  grid-area: content;
 }
 
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+aside {
+  grid-area: sidebar;
+  grid-row: 1/ -1;
+  height: 100vh;
+  background-color: $origin-dark;
 }
 
-li {
-  font-size: 3rem;
-  list-style: none;
-}
+// anker styles
 
-li a {
-  color: $origin-dark;
-}
-
-li a:hover {
-  color: rgb(71, 71, 71);
-}
-
-.logo {
-  padding: 2rem;
-  color: #960ce8;
+.underline-hover {
+  box-shadow: inset 0 -0.2em 0 #088596;
+  transition: transform .2s ease-in-out,box-shadow .2s ease-in-out,-webkit-transform .2s ease-in-out;
+  &:hover{
+    box-shadow: inset 0 -1.5em 0 #004F7F;
+  }
 }

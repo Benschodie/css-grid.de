@@ -1,58 +1,24 @@
 @import '../../styles/settings.scss';
 
-$instaSectionBackground: #f3d1a0;
-
 .instagram {
   margin-top: 5rem;
   padding: 5rem 0;
   grid-area: content;
+
+  display: grid;
+  grid-template-columns: 1fr 12fr 1fr;
+  grid-gap: 2rem;
 }
 
 .insta__feeds {
+  grid-column: 2 / 3;
+
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1rem 1fr 1rem;
-  grid-gap: 0.5rem;
-
-  @include fromBreakpoint($breakpoint-s) {
-    grid-template-columns: 1fr repeat(2, minmax(250px, 6fr)) 1fr;
-    grid-gap: 3rem;
-  }
-
-  @include fromBreakpoint($breakpoint-m) {
-    grid-template-columns: 1fr repeat(3, 4fr) 1fr;
-    grid-gap: 2rem;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
 
   .insta__feed {
-    grid-column: 2/3;
-
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    background: #fdffff;
-
-    -webkit-box-shadow: 20px 20px 40px -15px rgba(0,0,0,0.65);
-    -moz-box-shadow: 20px 20px 40px -15px rgba(0,0,0,0.65);
-    box-shadow: 20px 20px 40px -15px rgba(0,0,0,0.65);
-
-    &:nth-child(3n - 2) {
-
-      @include fromBreakpoint($breakpoint-s) {
-        grid-column: 2/3;
-      }
-    }
-
-    &:nth-child(3n - 1) {
-      @include fromBreakpoint($breakpoint-s) {
-        grid-column: 3/4;
-      }
-    }
-
-    &:nth-child(3n) {
-      @include fromBreakpoint($breakpoint-m) {
-        grid-column: 4/5;
-      }
-    }
+    margin: 0 auto;
   }
 }
 
@@ -75,35 +41,18 @@ $instaSectionBackground: #f3d1a0;
     width: 100%;
     height: 100%;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    #{$this}__likes {
-      transition: all 300ms;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      transform: translate(10px, 10px);
-      font-size: 2em;
-    }
-
-    #{$this}__tags {
-      transition: all 300ms;
-      justify-content: space-around;
-      flex-direction: column;
-      height: 0px;
-      color: black;
-    }
+    font-size: 1.6rem;
   }
 
   &:hover {
     #{$this}__overlay {
       opacity: 1;
-      #{$this}__likes {
-        transform: translate(-10px, -10px);
-      }
 
       #{$this}__tags {
         height: 100%;
@@ -120,9 +69,8 @@ $instaSectionBackground: #f3d1a0;
 
     #{$this}__likes,  #{$this}__commentsCount{
       font-weight: bold;
-      font-size: 1.5rem;
-      @include fromBreakpoint($breakpoint-s) {
-        font-size: 1.3rem;
+      font-size: 1rem;
+      @include fromBreakpoint($breakpoint-m) {
         letter-spacing: .1rem;
       }
     }

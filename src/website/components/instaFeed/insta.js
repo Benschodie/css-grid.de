@@ -27,13 +27,10 @@
     <a href="${instaPost.link}" target="blank" class="insta__img">
       <img src='${instaPost.images.low_resolution.url}'/>
       <div class="insta__overlay">
-      <i class="fa fa-heart fa-3x"></i>
-      </div>
-    </a>
-    <div class="insta__infos">
       ${createLikesHtml(instaPost)}
       ${createCommentsHtml(instaPost)}
-    </div>
+      </div>
+    </a>
   </div>
   `;
   const instafeed = document.getElementsByClassName('insta__feeds')[0];

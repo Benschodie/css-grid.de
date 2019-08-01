@@ -9,7 +9,8 @@
 
   @include fromBreakpoint($breakpoint-s) {
     grid-gap: 3rem;
-    grid-template-columns: 1fr minmax(400px, 8fr) minmax(100px, 4fr) 1fr;  }
+    grid-template-columns: 1fr minmax(400px, 8fr) minmax(100px, 4fr) 1fr;
+  }
 
   @include fromBreakpoint($breakpoint-m) {
     margin-top: 5rem;
